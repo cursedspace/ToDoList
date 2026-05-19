@@ -83,7 +83,7 @@ export default function App() {
   })
 // rounded rounded-md rounded-lg rounded-xl rounded-2xl rounded-full
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center pt-16">
+    <div className="min-h-screen bg-gray-500 flex justify-center py-10">
       <div className="bg-gray-700 rounded-2xl shadow-lg w-full max-w-lg p-6">
       <h1 className="text-3xl font-bold text-gray-200 mb-6">Мои задачи</h1>
         {/* кнопки для смены фильтрации */}
@@ -91,12 +91,12 @@ export default function App() {
           <button 
             onClick={ () => setFilter('all') }
             className={`rounded-full font-medium px-2.5 py-1.5 transition-colors ${
-              filter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+              filter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-400'}`}
             >Все</button>
           <button className={`rounded-full font-medium px-2.5 py-1.5 transition-colors ${
-              filter === 'active' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`} onClick={ () => setFilter('active') }>Активные</button>
+              filter === 'active' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-400'}`} onClick={ () => setFilter('active') }>Активные</button>
           <button className={`rounded-full font-medium px-2.5 py-1.5 transition-colors ${
-              filter === 'done' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`} onClick={ () => setFilter('done') }>Выполненные</button>
+              filter === 'done' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-400'}`} onClick={ () => setFilter('done') }>Выполненные</button>
         </div>
         <div className="bg-gray-800 rounded-2xl">
             <ul className=" text-gray-100 font-medium mt-5 px-1 py-2 w-full rounded-lg ml-2">
@@ -117,7 +117,7 @@ export default function App() {
         </div>
         
         <input 
-          className="font-medium px-2.5 py-1.5 w-full rounded-lg p-3 mt-6 bg-gray-100 border placeholder-grey-600 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="font-medium px-2.5 py-1.5 w-full rounded-lg p-3 mt-6 bg-gray-100 border placeholder-grey-600 transition-colors hover:bg-gray-300 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           type="text" 
           maxLength={25}
           placeholder="Задача"
@@ -130,10 +130,10 @@ export default function App() {
         />
         <div className="flex">
           <input 
-          className="font-medium px-2.5 py-1.5 flex-auto rounded-lg mt-6 mr-5 bg-gray-100 border placeholder-grey-600 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="font-medium px-2.5 py-1.5 flex-auto rounded-lg mt-6 mr-5 bg-gray-100 border placeholder-grey-600 transition-colors hover:bg-gray-300 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           type="text" 
           placeholder="Приоритет"
-          maxLength={10}
+          maxLength={20}
           value={priorityValue}
           onChange={(e) => setPriorityValue(e.target.value)}
           onKeyDown={(e) => {

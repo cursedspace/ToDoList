@@ -14,7 +14,7 @@ export function TodoItem({ task, editingId, editingValue,
     return (
         <li className="flex justify-between items-center gap-3 mr-3">
               <input 
-                className="m-2 h-4 w-4 cursor-pointer accent-blue-500"
+                className="m-2 h-4 w-4 bg-gray-200 border-gray-400 cursor-pointer accent-blue-500 border-2 transition-colors checked:appearance-auto hover:bg-gray-500 appearance-none"
                 type="checkbox" 
                 checked={task.done}
                 onChange={() => onToggle(task.id)}
